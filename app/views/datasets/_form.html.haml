@@ -21,9 +21,10 @@
         = f.date_select :createdate
 
     .form-group
-      = f.file_field :files, multiple: true, class: "col-sm-2 control-label"
+      = f.label :files,  class: "col-sm-2 control-label"
       .col-sm-9
-        = f.text_field :files
+      = f.file_field :files, multiple: true
+
 
 
     .actions.col-sm-offset-2.col-sm-9
