@@ -28,9 +28,11 @@ gem 'jbuilder', '~> 2.1.3'
 # To use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.5'
 
-gem 'rails_admin'
 
-gem 'pg', '0.17.1'
+gem 'pg'
+
+#To add file uploading functionality
+gem 'carrierwave'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
