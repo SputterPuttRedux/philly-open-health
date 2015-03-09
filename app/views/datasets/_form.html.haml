@@ -1,5 +1,5 @@
 .form-horizontal
-  = form_for @dataset do |f|
+  = form_for @dataset, :html => {:multipart => true} do |f|
     - if @dataset.errors.any?
       #error_explanation
         %h2= "#{pluralize(@dataset.errors.count, "error")} prohibited this dataset from being saved:"
@@ -16,10 +16,14 @@
       .col-sm-9
         = f.text_area :description
     .form-group
+      = f.label :upload, class: "col-sm-2 control-label"
+      .col-sm-9
+        = f.file_field :doc
+    .form-group
       = f.label :createdate, class: "col-sm-2 control-label"
       .col-sm-9
         = f.date_select :createdate
 
     .actions.col-sm-offset-2.col-sm-9
       = f.submit 'Save', class: "btn btn-large btn-info"
-    
+
