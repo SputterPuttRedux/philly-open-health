@@ -9,9 +9,12 @@
 #The following are just for easy demo purposes, and are not 'true' seed data. Newbie mode. :-)
 
 1.upto(10) do |n|
-    Dataset.create(title: "Test Document #{n}", description: "Test Doc #{n}", createdate: "2014-2-#{n}")    
+    Dataset.create(title: "Test Document #{n}", description: "Test Doc #{n}", createdate: "2014-2-#{n}")
 end
 
 1.upto(10) do |n|
-   Source.create(name: "Big Organization #{n}", description: "A nonprofit", homepageurl: "http://www.hivphilly.org") 
+   Source.create(name: "Big Organization #{n}", description: "A nonprofit", homepageurl: "http://www.hivphilly.org")
 end
+
+
+User.create(email: "foo@bar.edu", password: "password", password_confirmation: "password")
