@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -30,7 +30,10 @@ gem 'bcrypt', '~> 3.1.5'
 
 gem 'rails_admin'
 
-gem 'pg', '0.17.1'
+gem 'pg'
+
+# To add upload functionality
+gem 'carrierwave'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
