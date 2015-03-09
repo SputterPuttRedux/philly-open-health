@@ -23,8 +23,10 @@ class DatasetsController < ApplicationController
   # POST /datasets
   def create
     @dataset = Dataset.new(dataset_params)
+    @current_doc = DocUploader.new(dataset_params[:doc])
 
     if @dataset.save
+      @current_doc.store!
       redirect_to @dataset, notice: 'Dataset was successfully created.'
     else
       render action: 'new'
